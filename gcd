@@ -1,0 +1,49 @@
+import java.math.*;
+import java.io.*;
+import java.util.*;
+//Find GCD of 2 numbers
+public class gcd{
+    public int min(int a,int b){
+            if (a>b){
+                return b;
+            }
+            else{
+                return a;
+            }
+        }
+    public int hcf(int a, int b, int c){
+        int count =0;
+        while(c>1){
+            if(a%c==0&&b%c==0){
+              
+              return c;
+            
+            }
+            c--;
+            
+        }
+        
+        return a*b;
+        }
+  
+    public static void main(String[] args){
+        gcd g = new gcd();
+        Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        int b = s.nextInt();
+        int t = g.min(a,b);
+        System.out.println("min "+t);
+        
+        int result = g.hcf(a,b,t);
+        System.out.println(result);
+        
+    }
+    }
+
+        
+        
+      
+     
+    
+
+
